@@ -1,0 +1,64 @@
+.wave{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.waveSVG{
+    width: 100%;
+}
+
+.waveBanner{
+    top: -6vw;
+
+    @include media(xlg){
+        top: -4vw;
+    }
+
+    @include media(lg){
+        top: -2vw;
+    }
+
+    @include media(md){
+        top: -1vw;
+    }
+
+    @include media(xs){
+        top: 5vw;
+    }
+
+    @include media(xxs){
+        top: 7vw;
+    }
+
+    @include media(xsm){
+        top: 11vw;
+    }
+}
+
+.waveDomicilio--header{
+    top: -9.8vw;
+
+
+    @include media(lg){
+        top: -9.5vw;
+    }
+}
+
+.waveDomicilio--footer{
+    bottom: -8.8vw;
+    
+    @include media(lg){
+        bottom: -8.9vw;
+    }
+}
+
+.waveFooter{
+    top: -5vw;
+}
+
+.wavePopup{
+    bottom: -1.5vw;
+    z-index: -1;
+}

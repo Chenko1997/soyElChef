@@ -1,0 +1,43 @@
+.titulosBody{
+    @include media(md){
+        text-align: center;
+    }
+    h3{
+        font-family: Comforta-light;
+        color: $Naranja;
+        font-size: 2.5rem;
+
+        @include media(lg){
+            font-size: 1.9rem;
+        }
+
+        @include media(sm){
+            font-size: 1.4rem;
+        }
+    }
+    h2{
+        font-family: Poet;
+        color: $Cafe;
+        font-size: 4.5rem;
+        line-height: 1;
+        margin-top: -.5rem;
+        
+        @include media(lg){
+            font-size: 3.5rem;
+        }
+
+        @include media(sm){
+            font-size: 3rem;
+        }
+    }
+
+    p{
+        font-size: 1.3rem;
+        margin-top: .5rem;
+        font-family: Comforta-bold;
+
+        @include media(xs){
+            font-size: 1.1rem;
+        }
+    }
+}

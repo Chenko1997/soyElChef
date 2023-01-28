@@ -1,0 +1,36 @@
+.leyenda{
+    position: relative;
+    margin-top: -4rem;
+    z-index: 100;
+
+    .leyenda__copy{
+        padding: 2.5rem 9rem;
+        max-width: 1120px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $Cafe;
+        border-radius: 16px;
+
+        @include media(md){
+            padding: 2rem 1.2rem;
+        }
+
+        @include media(sm){
+            padding: 1.5rem 1rem;
+        }
+
+        p{
+            color: $Blanco;
+            font-size: 1.5rem;
+
+            @include media(md){
+                font-size: 1.2rem;
+            }
+
+            @include media(sm){
+                font-size: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,154 @@
+.chefcito{
+    background-image: url(../../img/Bg_chefcito.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: centers;
+    box-shadow: $boxShadow;
+    border-radius: 12px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0;
+    padding-top: 2rem;
+    margin-top: 12rem;
+    @include media(xlg){
+        width: 95%;
+    }
+
+    @include media(lg){
+        background-image: url(../../img/BannerKids_2.png);
+        background-position-x: center;
+        background-position-y: center;
+        background-size: fill;
+        padding: 0 1rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: 29rem;
+    }
+
+    @include media(xs){
+        margin-top: 22rem;
+    }
+
+    .chefcito__contenido{
+        width: 100%;
+        @include media(lg){
+            margin-top: 1.5rem;
+        }
+    }
+
+    .chefcito__mensaje{
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        @include media(lg){
+            padding: 0;
+        }
+
+        h3{
+            font-family: Poet;
+            font-size: 3.5rem;
+            color: $Cafe;
+            
+            @include media(md){
+                font-size: 3rem;
+            }
+
+            @include media(xxs){
+                font-size: 2.7rem;
+            }
+        }
+
+        p{
+            font-size: 1.3rem;
+
+            @include media(xs){
+                font-size: 1rem;
+            }
+        }
+        b{
+            color: $Cafe;
+            font-family: Comforta-bold;
+        }
+    }
+
+    .chefcito__wrapperComidas{
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin: 1rem 0;
+
+        @include media(lg){
+            text-align: left;
+            padding: 0;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .chefcito__img{
+        position: absolute;
+        right: -2rem;
+        top: -5.9rem;
+        @include media(lg){
+            right: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -25rem;
+            z-index: -1;
+        }
+
+        @include media(xs){
+            top: -19rem;
+            
+        }
+    }
+
+    .chefcito__img--pc{
+        width: 435px;
+        @include media(lg){
+            display: none;
+        }
+    }
+
+    .chefcito__img--mobile{
+        display: none;
+        @include media(lg){
+            display: block;
+            width: 250px;
+        }
+        @include media(xs){
+            width: 200px;
+        }
+    }
+
+    .chefcito__fraseFooter{
+        background-color: $Naranja;
+        padding: 1rem 3rem 1rem 2rem;
+        border-radius: 0 20px 0 0;
+        width: max-content;
+
+        @include media(lg){
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        h4{
+            color: $Cafe;
+            font-size: 1.1rem;
+            font-family: Comforta-bold;
+
+            @include media(xs){
+                font-size: .9rem;
+            }
+        }
+    }
+}

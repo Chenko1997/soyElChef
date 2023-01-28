@@ -1,0 +1,171 @@
+.popup{
+    position: fixed;
+    z-index: 110;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+
+    transition: opacity .6s ease;
+
+    display: grid;
+    place-items: center;
+
+    .popup__contenido{
+        position: relative;
+        z-index: 1;
+        padding: .5rem;
+        border-radius: 12px;
+        background-color: #f2f2f2;
+        width: 90%;
+        max-width: 650px;
+        height: 70%;
+        max-height: 650px;
+        overflow: hidden;
+        text-align: center;
+
+        @include media(xxs){
+            height: 75%;
+        }
+
+        @include media(xsm){
+            height: 95%;
+        }
+
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            z-index: 1;
+            bottom: -2rem;
+            width: 300px;
+            height: 188px;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @include media(xs){
+                width: 230px;
+                height: 128px;
+            }
+
+            @include media(xsm){
+                width: 200px;
+                height: 98px;
+            }
+        }
+
+        &::before{
+            left: -3rem;
+            rotate: 15deg;
+            background-image: url(../img/imgPopup.png);
+        }
+
+        &::after{
+            right: -5rem;
+            rotate: -15deg;
+            background-image: url(../img/imgPopup_2.png);
+        }
+    }
+
+    
+    .popup__mensaje{
+        padding: 0 1rem;
+        p{
+            font-size: 1.2rem;
+
+            @include media(xs){
+                font-size: .9rem;
+            }
+        }
+
+        h3{
+            margin-top: -8px;
+            font-family: Poet;
+            color: $Cafe;
+            font-size: 2.5rem;
+            line-height: 1;
+
+            @include media(xs){
+                font-size: 1.8rem;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .popup__campos{
+        margin: 2.5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+
+        @include media(xs){
+            margin: 2.5rem 0;
+            gap: 2rem;
+        }
+    }
+
+    .boton{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .popup__input{
+        position: relative;
+        width: 60%;
+
+        @include media(xs){
+            width: 80%;
+        }
+
+        input{
+            max-width: 800px;
+            border: solid 1px $Cafe;
+
+            @include media(xxs){
+                padding: .5rem;
+            }
+
+            &:focus, &:not(:placeholder-shown):not(:focus){
+                ~label{
+                    top: -25px;
+                    left: 15px;
+                    color: $Naranja;
+                    font-family: Comforta-bold;
+
+                    @include media(xxs){
+                        top: -20px;
+                    }
+                }
+            }
+        }
+
+        label{
+            position: absolute;
+            top: 18px;
+            left: 25px;
+            font-family: Comforta-Light;
+            color: #bdbdbd;
+            cursor: text;
+
+            transition: top .2s ease-in,
+                        left .2s ease-in,
+                        font-size .2s ease-in;
+
+           
+
+            @include media(xxs){
+                top: 14px;
+                font-size: .8rem;
+            }
+        }
+    }
+
+    .botonEnviar{
+        background-color: $Cafe;
+        color: $Blanco;
+        font-size: .9rem;
+        padding: .7rem 1.2rem;
+    }
+}

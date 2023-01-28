@@ -1,0 +1,97 @@
+@import 'componentes/breackpoint';
+@import 'componentes/variables';
+@import 'componentes/fonts';
+@import 'componentes/socialIcon';
+@import 'componentes/botones';
+@import 'componentes/waves';
+@import 'componentes/platillo';
+@import 'componentes/titulosBody';
+@import 'componentes/cardComida';
+@import 'componentes/popup';
+@import 'componentes/menuBurger';
+
+*{
+    //font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: $grayWhite;
+    font-family: Comforta;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $negro;
+}
+
+input{
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    border: 0;
+    padding: 1rem;
+    max-width: 350px;
+    font-size: 1.3rem;
+    font-family: Comforta-bold;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+button{
+    display: block;
+    margin: 0 0 0 auto;
+    background-color: $Cafe;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    
+    display: grid;
+    place-items: center;
+
+    @include media(xs){
+        width: 20px;
+        height: 20px;
+    }
+
+    svg{
+        fill: $Blanco;
+        width: 20px;
+        
+        @include media(xs){
+            width: 15px;
+        }
+    }
+}
+
+.container{
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0;
+    padding: 0 2rem;
+}
+
+@import 'paginas/navResponsive';
+@import 'paginas/header';
+@import 'paginas/leyenda';
+@import 'paginas/lineasNegocio';
+@import 'paginas/pasos';
+@import 'paginas/chefcito';
+@import 'paginas/pedirDomicilio';
+@import 'paginas/recomendados';
+@import 'paginas/testimonio';
+@import 'paginas/footer';

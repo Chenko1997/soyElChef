@@ -1,0 +1,21 @@
+.lineasNegocio{
+    text-align: left;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+
+    .lineasNegocio__marcas{
+        margin-top: 2rem;
+        display: flex;
+        gap: 7rem;
+
+        @include media(xlg){
+            gap: 5rem;
+        }
+
+        @include media(md){
+            gap: 2rem;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

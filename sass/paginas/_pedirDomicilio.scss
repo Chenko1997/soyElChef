@@ -1,0 +1,141 @@
+.pedirDomicilio{
+    width: 100%;
+    position: relative;
+    margin-top: 25rem;
+    background-color: $Naranja;
+
+    @include media(md){
+        margin-top: 45vw;
+    }
+    
+    @include media(xs){
+        margin-top: 65vw;
+    }
+
+    .pedirDomicilio__contenedor{
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        flex-direction: row;
+
+        @include media(lg){
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    .pedirDomicilio__imagen{
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+
+        @include media(lg){
+            height: 35vw;
+            max-width: 500px;
+        }
+
+        @include media(sm){
+            height: 30vw;
+            max-width: 400px;
+        }
+
+        @include media(xxs){
+            height: 10vw;
+        }
+
+        img{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .pedirDomicilio__informacion{
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: column;
+        margin: 7rem 0;
+        align-items: flex-start;
+
+        h4{
+            font-family: Poet;
+            font-size: 3.5rem;
+            color: $Cafe;
+            line-height: 1;
+
+            @include media(xs){
+                font-size: 2.5rem;
+            }
+
+            @include media(xsm){
+                font-size: 2rem;
+            }
+        }
+    }
+    
+    a{
+        display: grid;
+        place-items: center;
+        width: 140px;
+        height: 140px;
+        border-radius: 12px;
+        background-color: transparent;
+        transition: background-color .2s ease;
+    }
+
+    .pedirDomicilio__redes{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.5rem;
+
+        @include media(lg){
+            width: 100%;
+            justify-content: space-evenly;
+        }
+
+        svg{
+        }
+    }
+
+    .pedirDomicilio__logo{
+
+        .wppColor, .didiColor, .textoDidi, .rappiColor{
+            fill: $Blanco;
+        }
+
+        &:hover{
+            background-color: $Blanco;
+            .wppColor{
+                fill: #30BF39;
+            }
+
+            .didiColor{
+                fill: #FF771E;
+            }
+            
+            .textoDidi{
+                fill: #2E343E;
+            }
+
+            .rappiColor{
+                fill: #FF624E;
+            }
+        }
+
+        svg{
+            width: 100px;
+        }
+    }
+
+    .pedirDomicilio__logo--whatsapp{
+
+        svg{
+            width: 80px;
+        }
+    }
+}
